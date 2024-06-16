@@ -11,6 +11,12 @@
 		F1843B622C1BDFA400F4EE9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B612C1BDFA400F4EE9D /* ContentView.swift */; };
 		F1843B642C1BDFA600F4EE9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1843B632C1BDFA600F4EE9D /* Assets.xcassets */; };
 		F1843B672C1BDFA600F4EE9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1843B662C1BDFA600F4EE9D /* Preview Assets.xcassets */; };
+		F1843B722C1C16D900F4EE9D /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B712C1C16D900F4EE9D /* TCPClient.swift */; };
+		F1843B742C1C96AE00F4EE9D /* H264Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B732C1C96AE00F4EE9D /* H264Unit.swift */; };
+		F1843B762C1C992500F4EE9D /* H264Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B752C1C992500F4EE9D /* H264Parser.swift */; };
+		F1843B782C1CB3AB00F4EE9D /* H264Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B772C1CB3AB00F4EE9D /* H264Converter.swift */; };
+		F1843B7A2C1CB5CD00F4EE9D /* H264StreamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B792C1CB5CD00F4EE9D /* H264StreamClient.swift */; };
+		F1843B7C2C1CB84A00F4EE9D /* StreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1843B7B2C1CB84A00F4EE9D /* StreamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		F1843B612C1BDFA400F4EE9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1843B632C1BDFA600F4EE9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1843B662C1BDFA600F4EE9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1843B712C1C16D900F4EE9D /* TCPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
+		F1843B732C1C96AE00F4EE9D /* H264Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264Unit.swift; sourceTree = "<group>"; };
+		F1843B752C1C992500F4EE9D /* H264Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264Parser.swift; sourceTree = "<group>"; };
+		F1843B772C1CB3AB00F4EE9D /* H264Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264Converter.swift; sourceTree = "<group>"; };
+		F1843B792C1CB5CD00F4EE9D /* H264StreamClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H264StreamClient.swift; sourceTree = "<group>"; };
+		F1843B7B2C1CB84A00F4EE9D /* StreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F13B6FEB2C1E1D8100DEFBEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1843B732C1C96AE00F4EE9D /* H264Unit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F13B6FEC2C1E1DA100DEFBEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1843B612C1BDFA400F4EE9D /* ContentView.swift */,
+				F1843B7B2C1CB84A00F4EE9D /* StreamView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F13B6FED2C1E1DAD00DEFBEA /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				F1843B712C1C16D900F4EE9D /* TCPClient.swift */,
+				F1843B752C1C992500F4EE9D /* H264Parser.swift */,
+				F1843B772C1CB3AB00F4EE9D /* H264Converter.swift */,
+				F1843B792C1CB5CD00F4EE9D /* H264StreamClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		F1843B532C1BDFA400F4EE9D = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +91,10 @@
 		F1843B5E2C1BDFA400F4EE9D /* adjv */ = {
 			isa = PBXGroup;
 			children = (
+				F13B6FED2C1E1DAD00DEFBEA /* Client */,
+				F13B6FEC2C1E1DA100DEFBEA /* Views */,
+				F13B6FEB2C1E1D8100DEFBEA /* Models */,
 				F1843B5F2C1BDFA400F4EE9D /* adjvApp.swift */,
-				F1843B612C1BDFA400F4EE9D /* ContentView.swift */,
 				F1843B632C1BDFA600F4EE9D /* Assets.xcassets */,
 				F1843B652C1BDFA600F4EE9D /* Preview Content */,
 			);
@@ -137,7 +179,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1843B722C1C16D900F4EE9D /* TCPClient.swift in Sources */,
+				F1843B742C1C96AE00F4EE9D /* H264Unit.swift in Sources */,
+				F1843B7C2C1CB84A00F4EE9D /* StreamView.swift in Sources */,
 				F1843B622C1BDFA400F4EE9D /* ContentView.swift in Sources */,
+				F1843B762C1C992500F4EE9D /* H264Parser.swift in Sources */,
+				F1843B782C1CB3AB00F4EE9D /* H264Converter.swift in Sources */,
+				F1843B7A2C1CB5CD00F4EE9D /* H264StreamClient.swift in Sources */,
 				F1843B602C1BDFA400F4EE9D /* adjvApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
