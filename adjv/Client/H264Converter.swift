@@ -193,7 +193,8 @@ class H264Converter {
                 description = nil
                 //if we are finished building the description, create decompression session
                 if buildDescription(with: h264Unit) {
-//                    let _ = createDecompressionSession() 
+                    print("Built description")
+//                    let _ = createDecompressionSession()
                 }
                 return
             }

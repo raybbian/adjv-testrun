@@ -36,7 +36,7 @@ struct H264Unit {
     
     /// - paramter payload: pure NALU data(no length data or start code)
     init(payload: Data) {
-        let typeNumber = payload[0] & 0x1F
+        let typeNumber = payload[payload.startIndex] & 0x1F
            
         if typeNumber == 7 {
             self.type = .sps
@@ -51,6 +51,10 @@ struct H264Unit {
             self.type = .ignore
         }
         self.payload = payload
+        
+        if typeNumber != 1 {
+            print("Received \(naluTypesStrings[Int(typeNumber)])")
+        }
     }
 }
 

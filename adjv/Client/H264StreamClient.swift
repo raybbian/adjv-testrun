@@ -10,14 +10,13 @@ import Network
 import AVFoundation
 
 class H264StreamClient {
-    private let networkClient = TCPClient()
+    private let networkListener = NetworkListener()
     private let h264Parser = H264Parser()
     private let h264Converter = H264Converter()
     
     func start(on port: NWEndpoint.Port) throws {
-        try networkClient.start(port: port)
-        
-        networkClient.receivedDataCallback = { [h264Parser] data in
+        networkListener.start(port: port)
+        networkListener.dataRecievedCallback = { [h264Parser] data in
             h264Parser.enqueue(data)
         }
         h264Parser.h264ExtractedCallback = { [h264Converter] h264Unit in
