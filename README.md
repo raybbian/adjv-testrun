@@ -1,4 +1,4 @@
-# ADJV (Adjacent Vehicle)
+# Test for ADJV (Adjacent Vehicle)
 
 This is a test app to try to implement the features of Apple's Sidecar for a Linux host and iDevice client. It listens on a port for TCP packets containing H264 video in an elementary stream (Annex B) format, parses them, and feeds them into Apple's AVSampleBufferDisplayLayer for viewing (Unfortunely, no touch or pen input is supported).
 
